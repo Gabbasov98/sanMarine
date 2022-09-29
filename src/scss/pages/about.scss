@@ -1,0 +1,109 @@
+.about{
+  padding-bottom: 50px;
+  position: relative;
+  &__inner{
+    display: flex;
+    margin-top: 50px;
+  }
+  &__left{
+    flex-shrink: 0;
+    width: 348px;
+    margin-right: 70px;
+  }
+  &__right{
+    flex-grow: 1;
+  }
+  &__subtitle{
+    font-size: 18px;
+    font-weight: 600;
+    color: #bb9e82;
+  }
+  &__title{
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-top: 17px;
+    color: $secondary;
+  }
+  &__btn{
+    width: 323px;
+    height: 62px;
+    margin-top: 40px;
+    border-radius: 31px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &__decor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #ddc07c;
+    }
+    img{
+      width: 433px;
+      position: relative;
+      z-index: 2;
+      margin-left: -66px;
+    }
+  }
+}
+
+.advantages--about{
+  padding: 50px 0 55px;
+}
+
+.about-info{
+  padding: 54px 0 47px;
+}
+
+@media screen and (max-width: 992px){
+  .about{
+    padding: 0;
+    &__inner{
+      margin-top: 25px;
+      display: block;
+    }
+    &__left{
+      width: 100%;
+      margin: 0 0 20px;
+    }
+    &__subtitle{
+      font-size: 14px;
+    }
+    &__title{
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 10px;
+    }
+    &__btn{
+      width: 243px;
+      height: 47px;
+      margin-top: 25px;
+      font-size: 13px;
+    }
+    &__decor{
+      position: relative;
+      margin-top: 25px;
+      .container{
+        padding: 0;
+      }
+      img{
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .advantages--about{
+    padding: 30px 0 37px;
+  }
+}

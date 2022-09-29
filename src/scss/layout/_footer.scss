@@ -1,0 +1,144 @@
+.footer{
+  padding: 40px 0 50px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left,
+  &__right{
+    display: flex;
+  }
+  &__left{
+    flex-shrink: 0;
+  }
+  &__right{
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  &__logo{
+    display: block;
+    width: 253px;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  &__info{
+    max-width: 260px;
+    color: #171717;
+  }
+  &__co{
+    font-size: 11px;
+    line-height: 16px;
+    margin: 25px 0;
+  }
+  &__privacy{
+    font-size: 12px;
+  }
+  &__links{
+    margin: 0 90px;
+    flex-shrink: 0;
+  }
+  &__link{
+    display: block;
+    font-size: 13px;
+    line-height: 120%;
+    color: $secondary;
+    &:not(:last-child){
+      margin-bottom: 14px;
+    }
+  }
+  &__contacts{
+    &-item{
+      &:not(:last-child){
+        margin-bottom: 25px;
+      }
+    }
+    &-title{
+      font-size: 11px;
+      color: #4a4a4a;
+      margin-bottom: 12px;
+    }
+    &-link{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  &__btn{
+    width: 200px;
+    height: 41px;
+    border-radius: 20.5px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  &__phones{
+    &-link{
+      font-size: 16px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1100px){
+  .footer{
+    &__links{
+      margin: 0 40px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .footer{
+    padding: 22px 0;
+    &__inner{
+      flex-direction: column;
+    }
+    &__right{
+      order: -1;
+      justify-content: unset;
+    }
+    &__contacts{
+      &-item{
+        &:not(:last-child){
+          margin-bottom: 17px;
+        }
+      }
+      &-title{
+        font-size: 10px;
+        margin-bottom: 8px;
+      }
+      &-link{
+        font-size: 13px;
+      }
+    }
+    &__phones{
+      margin: 48px 0 0 -16px;
+      &-link{
+        font-size: 14px;
+      }
+    }
+    &__btn{
+      width: 133px;
+      height: 34px;
+      margin-top: -3px;
+      border-radius: 2px;
+      font-size: 10px;
+    }
+    &__logo,
+    &__links{
+      display: none;
+    }
+    &__co{
+      font-size: 9px;
+      line-height: 14px;
+      margin: 18px 0 12px;
+    }
+    &__privacy{
+      font-size: 10px;
+    }
+  }
+}

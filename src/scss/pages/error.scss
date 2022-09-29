@@ -1,0 +1,82 @@
+.error{
+  padding: 60px 0;
+  &__inner{
+    display: flex;
+  }
+  &__left{
+    flex-shrink: 0;
+    margin-right: 120px;
+  }
+  &__right{
+    padding-top: 75px;
+    max-width: 485px;
+  }
+  &__output{
+    font-size: 56px;
+    font-weight: 800;
+    color: #ddc07c;
+    span{
+      font-size: 190px;
+      display: block;
+      letter-spacing: -20px;
+    }
+  }
+  &__title{
+    color: $secondary;
+  }
+  &__desc{
+    font-size: 16px;
+    line-height: 26px;
+    color: #0d0d0d;
+    margin-top: 22px;
+  }
+  &__back{
+    margin-top: 54px;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .error{
+    padding: 40px 0 50px;
+    &__inner{
+
+    }
+    &__left{
+      margin-right: 60px;
+    }
+    &__right{
+      padding-top: 30px;
+    }
+    &__output{
+      font-size: 29.5px;
+      span{
+        font-size: 100.1px;
+        letter-spacing: -10px;
+      }
+    }
+    &__desc{
+      font-size: 13px;
+      line-height: 20px;
+      margin-top: 15px;
+    }
+    &__back{
+      margin-top: 26px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .error{
+    &__inner{
+      display: block;
+    }
+    &__left{
+      margin: 0 0 20px;
+    }
+    &__right{
+      padding: 0;
+    }
+  }
+}
