@@ -1,0 +1,71 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Наши услуги", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"index":"true"})
+        </header>
+        <main class="content">
+
+            <section class="service-page">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <h1 class="breadcrumbs__title display2">Автомобильные перевозки грузов</h1>
+                        <div class="breadcrumbs__items">
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <a href="" class="breadcrumbs__item">Наши услуги</a>
+                            <span class="breadcrumbs__item">Автомобильные перевозки грузов</span>
+                        </div>
+                    </div>
+                    <div class="service-page__inner">
+                        <div class="service-page__content">
+                            <div class="service-page__desc body-text">
+                                <p>Компания «SanMarine» осуществляет автомобильные перевозки грузов самого различного назначения по России и из-за рубежа. Сегодня всё больше компаний как во Владивостоке, так и в других городах, обращаются к автомобильному виду грузового транспорта. Для клиентов привлекательны, в первую очередь, быстрота доставки, независимость от расписания поездов и возможность доставки грузов от двери до двери без дополнительных хлопот и трат на перегрузки с одного вида транспорта на другой.</p>
+                            </div>
+                            <div class="service-page__buttons">
+                                <button class="service-page__btn mbtn mbtn-primary">отправить заявку на расчёт</button>
+                                <button class="service-page__btn mbtn mbtn-blue">заказать консультацию</button>
+                            </div>
+                        </div>
+                        <div class="service-page__img">
+                            <img src="img/service2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="auto">
+                <div class="container">
+                    <div class="auto__inner">
+                        <div class="auto__left">
+                            <h2 class="auto__title">Контейнерные автомобильные перевозки</h2>
+                            <div class="auto__desc body-text">
+                                <p>Контейнеры могут доставляться в рамках мультимодальных перевозок (например, морским транспортом), а затем перегружаться на грузовой автотранспорт для доставки прямо на склад получателя. Это обеспечивает максимальную безопасность груза и низкую стоимость транспортировки.</p>
+                                <p>Множество хрупких товаров различных отраслей доставляются посредством автомобильных перевозок. Профессионализм водителей и надёжная дополнительная упаковка гарантируют высокую сохранность грузов, в том числе посуды, напитков в стеклянной таре, цифровой техники и других бьющихся и ломких предметов.</p>
+                                <p>К скоропортящимся грузам относятся те виды грузов, при транспортировке которых обязательным условием является соблюдение особого температурного режима, а также уровня влажности и света. Для каждого груза устанавливается необходимый режим хранения, который поддерживается на протяжении всего пути.</p>
+                                <p>Мы готовы предложить вам услуги доставки опасных грузов, в числе которых легко воспламеняющиеся и взрывчатые вещества, химические реагенты и другие субстанции. Транспортировка производится с учётом всех правил перевозки опасных грузов, установленных для той или иной категории груза.</p>
+                            </div>
+                        </div>
+                        <div class="auto__right">
+                            @@include('components/page-blocks/_auto.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('components/page-blocks/_qa.html')
+
+            @@include('components/page-blocks/_consult.html')
+
+            @@include('components/page-blocks/_subscribe.html',{"error":"false","success":"false"})
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

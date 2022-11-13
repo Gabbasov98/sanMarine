@@ -1,0 +1,72 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Полезная информация", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"index":"true"})
+        </header>
+        <main class="content">
+
+            <section class="info-page">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <h1 class="breadcrumbs__title display2">Организация транспортной логистики</h1>
+                        <div class="breadcrumbs__items">
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <a href="" class="breadcrumbs__item">Полезная информация</a>
+                            <span class="breadcrumbs__item">Организация транспортной логистики</span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="desc__img">
+                            <img src="img/desc.png" alt="">
+                        </div>
+                        <div class="desc__content">
+                            <div class="desc__text body-text">
+                                <p><strong>Транспортная логистика</strong> заключается в организации процесса доставки товаров в место и сроки, установленные заказчиком при наименьших финансовых тратах по наиболее оптимальным маршрутам.</p>
+                                <p>Анализируя <a href="">параметры перевозимых товаров</a>, специалисты уделяют внимание выбору транспорта и разработке маршрута. Комплекс мероприятий, направленных на подготовку автотранспортного средства определяется количеством перевозимой продукции.</p>
+                            </div>
+                            <div class="desc__bottom">
+                                <div class="desc__tags">
+                                    <div class="desc__tags-title">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10.82"><path d="M37.73,491.56H48.9a1.54,1.54,0,0,1,1.55,1.55v7.72a1.54,1.54,0,0,1-1.55,1.55H37.73a1.55,1.55,0,0,1-1.29-.69l-2.86-4.29a.79.79,0,0,1,0-.86l2.86-4.29A1.55,1.55,0,0,1,37.73,491.56ZM35.15,497l2.58,3.86H48.9v-7.72H37.73Zm2.94.77a.77.77,0,1,1,.77-.77A.77.77,0,0,1,38.09,497.74Z" transform="translate(-33.45 -491.56)" fill="#010101;fill-rule:evenodd"></path></svg>
+                                        <span>Тэги:</span>
+                                    </div>
+                                    <div class="desc__tag">логистика</div>
+                                    <div class="desc__tag">таможенное оформление</div>
+                                </div>
+                                <a href="" class="desc__back back-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.93 19.85"><path d="M308.41,420.15H295.79l3.39-3.17a.63.63,0,0,0,0-.9.64.64,0,0,0-.9,0L294,420.14a.61.61,0,0,0-.29.19.64.64,0,0,0-.07.71.67.67,0,0,0,.29.31l4.43,4.15a.63.63,0,0,0,.43.17h0a.63.63,0,0,0,.47-.2.64.64,0,0,0,0-.9l-3.37-3.14h12.6a.63.63,0,0,0,.63-.63A.64.64,0,0,0,308.41,420.15Z" transform="translate(-287.11 -410.85)" fill="#444a66"></path><path d="M297,429.43a8.66,8.66,0,0,1,0-17.31.64.64,0,0,0,.64-.63.64.64,0,0,0-.64-.64h0a9.93,9.93,0,0,0,0,19.85.64.64,0,0,0,.64-.63A.64.64,0,0,0,297,429.43Z" transform="translate(-287.11 -410.85)" fill="#444a66"></path></svg>
+                                    <span>вернуться к списку</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('components/page-blocks/_text.html')
+
+                    <a href="" class="info-page__back back-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.93 19.85"><path d="M308.41,420.15H295.79l3.39-3.17a.63.63,0,0,0,0-.9.64.64,0,0,0-.9,0L294,420.14a.61.61,0,0,0-.29.19.64.64,0,0,0-.07.71.67.67,0,0,0,.29.31l4.43,4.15a.63.63,0,0,0,.43.17h0a.63.63,0,0,0,.47-.2.64.64,0,0,0,0-.9l-3.37-3.14h12.6a.63.63,0,0,0,.63-.63A.64.64,0,0,0,308.41,420.15Z" transform="translate(-287.11 -410.85)" fill="#444a66"></path><path d="M297,429.43a8.66,8.66,0,0,1,0-17.31.64.64,0,0,0,.64-.63.64.64,0,0,0-.64-.64h0a9.93,9.93,0,0,0,0,19.85.64.64,0,0,0,.64-.63A.64.64,0,0,0,297,429.43Z" transform="translate(-287.11 -410.85)" fill="#444a66"></path></svg>
+                        <span>вернуться к списку публикаций</span>
+                    </a>
+
+                    @@include('components/page-blocks/_info.html')
+                </div>
+            </section>
+
+            <section class="news news--small">
+                @@include('components/page-blocks/_news.html',{"title":"Читайте также..."})
+            </section>
+
+            @@include('components/page-blocks/_subscribe.html',{"error":"false","success":"false"})
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

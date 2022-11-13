@@ -1,0 +1,52 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Наши услуги", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"index":"true"})
+        </header>
+        <main class="content">
+
+            <section class="service-page">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <h1 class="breadcrumbs__title display2">Наши услуги</h1>
+                        <div class="breadcrumbs__items">
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <span class="breadcrumbs__item">Наши услуги</span>
+                        </div>
+                    </div>
+                    <div class="service-page__inner">
+                        <div class="service-page__content">
+                            <div class="service-page__desc body-text">
+                                <p><strong>Группа компаний «СанМарин»</strong> осуществляет полный комплекс услуг по товарообороту: производство, продажа, транспортная логистика, таможенное оформление товаров.</p>
+                                <p>Мы работаем напрямую с несколькими крупными заводами Китая, Вьетнама, Таиланда без посредников, сами осуществляем все таможенные процедуры, и к поставляемым товарам прилагаем весь пакет разрешительной документации согласно требованиям законодательства Российской Федерации. Обеспечим полным комплексом услуг по контрактному производству за рубежом и поставками в РФ продуктов питания и прочих товаров под Собственной Торговой Маркой заказчика.</p>
+                            </div>
+                        </div>
+                        <div class="service-page__img">
+                            <img src="img/service.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('components/page-blocks/_custom.html')
+
+            <section class="export">
+                @@include('components/page-blocks/_export.html',{"title":"Экспорт товаров"})
+            </section>
+
+            @@include('components/page-blocks/_service.html')
+
+            @@include('components/page-blocks/_subscribe.html',{"error":"false","success":"false"})
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -66,12 +66,11 @@
     padding: 0 20px;
   }
   &__icon{
-    width: 48px;
     flex-shrink: 0;
-    margin-right: 41px;
-    img{
-      width: 100%;
-    }
+    margin-right: 36px;
+  }
+  &__title{
+    max-width: 255px;
   }
   &__desc{
     font-size: 13px;
@@ -217,9 +216,6 @@
       path{
         fill: #bd9944;
       }
-      span{
-        text-decoration: underline;
-      }
     }
     svg{
       width: 22px;
@@ -236,7 +232,7 @@
     align-items: center;
   }
   &__title{
-    white-space: nowrap;
+    flex-shrink: 0;
     margin-right: 54px;
     font-size: 34px;
   }
@@ -266,7 +262,6 @@
         background-color: #c3a356;
       }
       .export__item-title{
-        text-decoration: underline;
         color: #bd9944;
       }
     }
@@ -371,6 +366,7 @@
     width: 168px;
     height: 40px;
     border-radius: 20.3px;
+    font-size: 13px;
   }
   &__desc2{
     font-size: 13px;
@@ -609,6 +605,7 @@
   .advantages{
     padding: 30px 0 20px;
     &__icon{
+      width: 48px;
       margin-right: 24px;
       display: flex;
       justify-content: center;
@@ -864,9 +861,10 @@
     }
     &__btn{
       font-size: 0;
-      background-image: url(../img/right.png);
+      background-image: url(../img/list-arrow-white.svg);
       background-position: center;
       background-repeat: no-repeat;
+      transform: rotate(-90deg);
     }
     &__hint{
       font-size: 9px;

@@ -1,0 +1,111 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Онлайн-заявка на просчёт", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"index":"true"})
+        </header>
+        <main class="content">
+
+            <section class="req">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <h1 class="breadcrumbs__title display2">Онлайн-заявка на просчёт</h1>
+                        <div class="breadcrumbs__items">
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <span class="breadcrumbs__item">Онлайн-заявка на просчёт</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="req-form">
+                    <div class="container">
+                        <div class="req-form__inner">
+                            <div class="req-form__info">
+                                <fieldset class="fg">
+                                    <label>
+                                        Ваше имя <span>*</span>
+                                    </label>
+                                    <input type="text">
+                                </fieldset>
+                                <fieldset class="fg">
+                                    <label>
+                                        Электронная почта <span>*</span>
+                                    </label>
+                                    <input type="email">
+                                </fieldset>
+                                <fieldset class="fg">
+                                    <label>Номер телефона</label>
+                                    <input type="tel">
+                                </fieldset>
+                            </div>
+                            <div class="req-form__service fg">
+                                <label>
+                                    Интересующая услуга <span>  *</span>
+                                </label>
+                                <select class="custom-select service-select">
+                                    <option selected hidden disabled>- выберите интересующую вас услугу -</option>
+                                    <option>Контейнерные морские перевозки</option>
+                                    <option>Авиперевозки контейнерами</option>
+                                    <option>Автомобильные перевозки</option>
+                                    <option>Железнодорожные перевозки</option>
+                                    <option>Сборные грузы</option>
+                                    <option>Срочная доставка</option>
+                                    <option>Таможенное оформление</option>
+                                </select>
+                            </div>
+                            <div class="req-form__direction">
+                                <fieldset class="fg" data-direction="А">
+                                    <label>
+                                        Откуда <span>*</span>
+                                    </label>
+                                    <input type="text">
+                                </fieldset>
+                                <fieldset class="fg" data-direction="B">
+                                    <label>
+                                        Куда <span>*</span>
+                                    </label>
+                                    <input type="text">
+                                </fieldset>
+                            </div>
+                            <div class="req-form__bottom">
+                                <div class="req-form__left">
+                                    <fieldset class="fg">
+                                        <label>
+                                            Опишите заявку и груз <span>*</span>
+                                        </label>
+                                        <textarea></textarea>
+                                    </fieldset>
+                                    <div class="req-form__hint">
+                                        <span>*</span> обязательные поля для заполнения
+                                    </div>
+                                </div>
+                                <div class="req-form__right">
+                                    <div class="req-form__check check">
+                                        <input checked type="checkbox">
+                                        <label>Даю согласие на обработку персональной информации согласно политики сайта</label>
+                                    </div>
+                                    <button class="req-form__btn mbtn mbtn-blue">ОТПРАВИТЬ ЗАПРОС</button>
+                                    <div class="req-form__capcha">
+                                        <img src="img/capcha.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            @@include('components/page-blocks/_subscribe.html',{"error":"false","success":"false"})
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/_popups.html')
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

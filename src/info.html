@@ -1,0 +1,69 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Полезная информация", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"index":"true"})
+        </header>
+        <main class="content">
+
+            <section class="information">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <h1 class="breadcrumbs__title display2">Полезная информация</h1>
+                        <div class="breadcrumbs__items">
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <span class="breadcrumbs__item">Полезная информация</span>
+                        </div>
+                    </div>
+                    <div class="information__inner">
+                        @@include('components/page-blocks/_info.html')
+                        <div class="information__items">
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                            @@include('components/cards/_info-card.html')
+                        </div>
+                        <div class="pagination">
+                            <span class="pagination__desc">Страница:</span>
+                            <a href="" class="pagination__item pagination__item--active">
+                                <span>1</span>
+                            </a>
+                            <a href="" class="pagination__item">
+                                <span>2</span>
+                            </a>
+                            <a href="" class="pagination__item">
+                                <span>3</span>
+                            </a>
+                            <a href="" class="pagination__item">
+                                <span>4</span>
+                            </a>
+                            <a href="" class="pagination__item">
+                                <span>5</span>
+                            </a>
+                            <a href="" class="pagination__next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 21.18 11.56">
+                                    <path class="st0" d="M21.18,5.74L21.18,10.86C21.18,11.35 20.69,11.69 20.21,11.49L10.59,6.64L0.96,11.49C0.55,11.69 0,11.42 0,10.86L0,5.74C0,5.46 0.13,5.26 0.34,5.12L10.59,0L20.83,5.12C21.04,5.26 21.18,5.46 21.18,5.74"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('components/page-blocks/_subscribe.html',{"error":"false","success":"false"})
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

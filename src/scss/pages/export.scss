@@ -1,0 +1,160 @@
+.export-page{
+  padding: 40px 0 60px;
+  overflow: hidden;
+  &__inner{
+    position: relative;
+  }
+  &__content{
+    max-width: 665px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+  &__img{
+    position: absolute;
+    left: 530px;
+    bottom: 0;
+    width: 766px;
+  }
+  &__desc{
+    font-size: 16px;
+    max-width: 580px;
+  }
+  &__buttons{
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  &__btn{
+    height: 62px;
+    border-radius: 31px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.export-china{
+  background-color: #353a53;
+  color: #ffffff;
+  &__inner{
+    min-height: 607px;
+    padding: 70px 0 95px;
+    position: relative;
+  }
+  &__img{
+    position: absolute;
+    height: 100%;
+    width: auto;
+    right: 445px;
+    top: 0;
+  }
+  &__content{
+    max-width: 610px;
+    margin-left: auto;
+    position: relative;
+    z-index: 3;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    padding-bottom: 36px;
+    position: relative;
+    max-width: 400px;
+    margin-bottom: 30px;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 112px;
+      height: 3px;
+      background-color: #ddc07c;
+      left: 0;
+      bottom: 0;
+    }
+    span{
+      color: #ddc07c;
+    }
+  }
+}
+
+.export-small{
+  .export{
+    @media screen and (min-width: 992px){
+      &__title{
+        font-size: 26px;
+        line-height: 36px;
+        max-width: 270px;
+      }
+      &__items{
+        max-width: 1170px;
+        padding: 0 30px;
+        grid-template-columns: repeat(4, calc(25% - (39px / 4)));
+        gap: 13px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 992px){
+  .export-page{
+    padding: 22px 0 0;
+    &__img{
+      position: static;
+      width: calc(100% + 28px);
+      margin-left: -14px;
+    }
+    &__desc{
+      font-size: 13px;
+    }
+    &__buttons{
+      margin-top: 21px;
+      max-width: 474px;
+      gap: 10px;
+    }
+    &__btn{
+      height: 45px;
+      border-radius: 22.5px;
+      font-size: 12px;
+    }
+  }
+
+  .export-china{
+    &__inner{
+      padding: 30px 3px 40px 26px;
+      min-height: unset;
+    }
+    &__content{
+      max-width: 100%;
+    }
+    &__img{
+      display: none;
+    }
+    &__title{
+      font-size: 20px;
+      line-height: 26px;
+      max-width: 205px;
+      padding-bottom: 23px;
+      margin-bottom: 23px;
+      &::before{
+        width: 112px;
+        height: 2px;
+      }
+    }
+    &__desc{
+      font-size: 13px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .export-page{
+    &__buttons{
+      margin-top: 21px;
+      max-width: 232px;
+      grid-template-columns: 100%;
+    }
+  }
+}

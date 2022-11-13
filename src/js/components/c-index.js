@@ -7,18 +7,14 @@ if(parallaxMain){
     const speed = 0.15
 
     let positionX = 0
-    let positionY = 0
     let cordXPercent = 0
-    let cordYPercent = 0
 
     function setMouseParallaxStyle() {
         const distX = cordXPercent - positionX
-        const distY = cordYPercent - positionY
 
         positionX = positionX + (distX * speed)
-        positionY = positionY + (distY * speed)
 
-        mainImg.style.cssText = `transform: translate(${positionX/forMainImg}%,${positionY/forMainImg}%);`
+        mainImg.style.cssText = `transform: translate(${positionX/forMainImg}%,0%);`
 
         requestAnimationFrame(setMouseParallaxStyle)
     }
@@ -27,12 +23,24 @@ if(parallaxMain){
 
     parallaxMain.addEventListener("mousemove", function (e) {
         const parallaxWidth = parallaxMain.offsetWidth
-        const parallaxHeight = parallaxMain.offsetHeight
 
         const cordX = e.pageX - parallaxWidth/2;
-        const cordY = e.pageY - parallaxHeight/2;
 
         cordXPercent = cordX / parallaxWidth * 100
-        cordYPercent = cordY / parallaxHeight * 100
     })
 }
+
+
+
+function setBoatSpeed() {
+    let speed = window.innerWidth / 80
+    if (window.innerWidth < 992){
+        speed = 20
+    }
+    $(".boat img").css("animation-duration",`${speed}s`)
+}
+
+$(window).resize(function () {
+    setBoatSpeed()
+})
+setBoatSpeed()

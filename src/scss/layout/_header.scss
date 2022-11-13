@@ -132,6 +132,7 @@
 
 .header-bottom{
   &__inner{
+    z-index: 6;
     padding: 31px 0;
     position: relative;
     display: flex;
@@ -166,6 +167,7 @@
 
 .header-service{
   position: relative;
+  z-index: 6;
   &__show{
     display: flex;
     align-items: center;
@@ -208,6 +210,7 @@
     }
   }
   &__hidden{
+    z-index: 12;
     position: absolute;
     left: -34px;
     top: 100%;
@@ -272,6 +275,9 @@
     }
     &__btn{
       padding: 0 20px;
+      @media screen and (max-width: 1030px){
+        padding: 0 10px;
+      }
     }
   }
 

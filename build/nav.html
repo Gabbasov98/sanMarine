@@ -16,7 +16,7 @@
         font-size: 30px;
         text-transform: capitalize;
     }
-    
+
     .wrapper button {
         margin-bottom: 25px;
         width: 300px;
@@ -30,31 +30,139 @@
         <a href="index.html" style="display: block; margin-bottom: 20px;">
             Главная
         </a>
+        <a href="404.html" style="display: block; margin-bottom: 20px;">
+            404
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            About
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Contacts
+        </a>
+        <a href="req.html" style="display: block; margin-bottom: 20px;">
+            Form
+        </a>
+        <a href="info.html" style="display: block; margin-bottom: 20px;">
+            Info
+        </a>
+        <a href="info2.html" style="display: block; margin-bottom: 20px;">
+            Info 2
+        </a>
+        <a href="service.html" style="display: block; margin-bottom: 20px;">
+            Service
+        </a>
+        <a href="service-page.html" style="display: block; margin-bottom: 20px;">
+            Service 2
+        </a>
+        <a href="service-page2.html" style="display: block; margin-bottom: 20px;">
+            Service 3
+        </a>
+        <a href="textpage.html" style="display: block; margin-bottom: 20px;">
+            Textpage
+        </a>
 
 
 
 
-        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">
-            Быстрый заказ
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#consult">
+            ЗАПРОС КОНСУЛЬТАЦИИ
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#success">
+            ЗАПРОС УСПЕШНО
+            ОТПРАВЛЕН
         </button>
 
     </div>
 
-    <div class="modal" id="quickOrder" aria-hidden="true">
+    <div class="modal fade" id="consult" aria-hidden="true">
     <div class="modal-dialog">
-        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55401 10.5L2 2.94599L2.94599 2L10.5 9.55401L18.054 2L19 2.94599L11.446 10.5L19 18.054L18.054 19L10.5 11.446L2.94599 19L2 18.054L9.55401 10.5Z" fill="#333333"/>
-            </svg>
-        </button>
+        <div class="modal__top">
+            <div class="modal__title">
+                ЗАПРОС <span>КОНСУЛЬТАЦИИ</span>
+            </div>
+            <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.01 16.01"><path d="M141.49,663l6.64-6.64a.8.8,0,0,0,0-1.13.79.79,0,0,0-1.13,0l-6.64,6.64-6.64-6.64a.79.79,0,0,0-1.13,0,.8.8,0,0,0,0,1.13l6.64,6.64-6.64,6.64a.8.8,0,0,0,0,1.13.76.76,0,0,0,.56.23.78.78,0,0,0,.57-.23l6.64-6.64,6.64,6.64a.78.78,0,0,0,.57.23.76.76,0,0,0,.56-.23.8.8,0,0,0,0-1.13Z" transform="translate(-132.35 -654.94)" fill="#fff"></path></svg>
+            </button>
+            <div class="modal__round">
+                <div class="modal__round-item modal__round1"></div>
+                <div class="modal__round-item modal__round2"></div>
+                <div class="modal__round-item modal__round3"></div>
+                <div class="modal__round-item modal__round4"></div>
+                <div class="modal__round-item modal__round5"></div>
+            </div>
+        </div>
+        <form class="modal__form">
+            <div class="modal__service">
+                <select class="custom-select service-select service-select2">
+                    <option selected hidden disabled>- выберите интересующую вас услугу -</option>
+                    <option>Контейнерные морские перевозки</option>
+                    <option>Авиперевозки контейнерами</option>
+                    <option>Автомобильные перевозки</option>
+                    <option>Железнодорожные перевозки</option>
+                    <option>Сборные грузы</option>
+                    <option>Срочная доставка</option>
+                    <option>Таможенное оформление</option>
+                </select>
+            </div>
+            <div class="modal__form-grid">
+                <fieldset class="fg modal__form-big">
+                    <label>
+                        Ваше имя <span>*</span>
+                    </label>
+                    <input type="text">
+                </fieldset>
+                <fieldset class="fg modal__form-small">
+                    <label>Номер телефона</label>
+                    <input type="tel">
+                </fieldset>
+                <button class="modal__btn mbtn mbtn-blue">Отправить ЗАЯВКУ</button>
+                <div class="modal__hint">
+                    <span>
+                        Нажимая кнопку “Отправить заявку” Вы соглашаетесь с
+                    <a href="">правилами сайта по обработке персональных данных</a>
+                    </span>
+                </div>
+                <div class="modal__capcha">
+                    <img src="img/capcha.png" alt="">
+                </div>
+            </div>
+        </form>
 
+    </div>
+</div>
 
+<div class="modal fade modal-thanks"  id="success" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-thanks__wrap">
+            <div class="modal__round">
+                <div class="modal__round-item modal__round1"></div>
+                <div class="modal__round-item modal__round2"></div>
+                <div class="modal__round-item modal__round3"></div>
+                <div class="modal__round-item modal__round4"></div>
+                <div class="modal__round-item modal__round5"></div>
+            </div>
+            <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.01 16.01"><path d="M141.49,663l6.64-6.64a.8.8,0,0,0,0-1.13.79.79,0,0,0-1.13,0l-6.64,6.64-6.64-6.64a.79.79,0,0,0-1.13,0,.8.8,0,0,0,0,1.13l6.64,6.64-6.64,6.64a.8.8,0,0,0,0,1.13.76.76,0,0,0,.56.23.78.78,0,0,0,.57-.23l6.64-6.64,6.64,6.64a.78.78,0,0,0,.57.23.76.76,0,0,0,.56-.23.8.8,0,0,0,0-1.13Z" transform="translate(-132.35 -654.94)" fill="#fff"></path></svg>
+            </button>
+            <div class="modal-thanks__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.22 96.12"><path d="M135.36,711h48.23c1.83,0,2.91-.38,3.75-1.3a4.55,4.55,0,0,0,1-3.29c0-3.47,0-7,0-10.42,0-7.74,0-15.75,0-23.62A18.92,18.92,0,0,0,188,669a1.57,1.57,0,0,0-1.24-1.33,12.19,12.19,0,0,0-2.78-.44c-6.17,0-12.44,0-18.5,0H148.64c-1.39,0-2.8,0-4.16,0-3,0-6.14-.07-9.2,0-3.6.14-3.7.61-4.22,3.27a4.8,4.8,0,0,0-.05.88c0,.1,0,.2,0,.3q0,17.41,0,34.84C131,709.41,132.52,710.93,135.36,711Zm46.24-39.82-21.93,21.19-21.92-21.19ZM135,675.82l1.4-1.32.62.74.66.84a14.52,14.52,0,0,0,1.37,1.6c5.7,5.58,11.44,11.15,17,16.53,2.51,2.43,4.75,2.44,7.27,0l10-9.7,8.57-8.28.59-.55.39-.35,1.52-1.39V707H135Z" transform="translate(-91.21 -614.85)" fill="#e1cea1"></path><path d="M149.62,618.63c-.41-2.9-.46-3.27-3.37-3.68a12,12,0,0,0-1.69-.09H96.79c-3.53,0-4.45.93-4.47,4.47v34.72c0,3.09,1.45,4.52,4.56,4.52h48.34c2.93,0,4.41-1.5,4.41-4.44V619.2A2.65,2.65,0,0,0,149.62,618.63Zm-6.74.16L121,640l-21.9-21.17Zm2.84,35.88H96.27V621.85L97.74,623l.22.17a6.06,6.06,0,0,1,.53.42l4.18,4.06c4.72,4.57,9.6,9.3,14.38,14,2,1.91,3.47,2.43,5.22,1.77a7.18,7.18,0,0,0,2.29-1.55c4.65-4.45,9.36-9,13.91-13.41l4.79-4.62c.18-.18.37-.34.59-.54l.35-.31,1.52-1.37Z" transform="translate(-91.21 -614.85)" fill="#fff"></path><path d="M104.58,678.37H93.49a2.51,2.51,0,0,0-1.8.65,1.66,1.66,0,0,0-.48,1.23c0,1.25.85,2,2.31,2H116a2.56,2.56,0,0,0,1.84-.67,1.66,1.66,0,0,0,.47-1.18,2.06,2.06,0,0,0-2.33-2Z" transform="translate(-91.21 -614.85)" fill="#e1cea1"></path><path d="M162.37,627.67a2,2,0,0,0,1.17,2,4.59,4.59,0,0,0,1.48.2c7.58,0,15.21,0,21.77,0a6.32,6.32,0,0,0,1.17-.09,1.84,1.84,0,0,0,1.45-1.54,1.88,1.88,0,0,0-1-2,4.5,4.5,0,0,0-1.45-.21H165.15a10.22,10.22,0,0,0-1.13.05A2,2,0,0,0,162.37,627.67Z" transform="translate(-91.21 -614.85)" fill="#fff"></path><path d="M178.62,645.57a2,2,0,0,0-2.2-2c-1.39,0-2.8,0-4.17,0h-7.71a2,2,0,0,0-2.18,1.79,2,2,0,0,0,.54,1.41,2.21,2.21,0,0,0,1.59.64c4,0,8.08,0,12,0A2,2,0,0,0,178.62,645.57Z" transform="translate(-91.21 -614.85)" fill="#fff"></path><path d="M102,697.8c0,1.21.9,2,2.33,2H116c1.34,0,2.25-.75,2.27-1.81a1.89,1.89,0,0,0-.52-1.39,2.26,2.26,0,0,0-1.64-.63c-1.94,0-3.94,0-6,0l-5.9,0A2,2,0,0,0,102,697.8Z" transform="translate(-91.21 -614.85)" fill="#e1cea1"></path></svg>
+            </div>
+            <div class="modal-thanks__content">
+                <div class="modal-thanks__title">
+                    ЗАПРОС УСПЕШНО
+                    <span>ОТПРАВЛЕН</span>
+                </div>
+                <div class="modal-thanks__desc">В ближайшее время он будет отработан и наш менеджер свяжется с Вами.</div>
+                <button class="modal-thanks__close" data-bs-dismiss="modal">закрыть сообщение</button>
+            </div>
+        </div>
 
     </div>
 </div>
 
 
-<!-- <div class="modal-backdrop show"></div> -->
+<!-- <div class="modal-backdrop show"></div>-->
+
     <!--  -->
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>

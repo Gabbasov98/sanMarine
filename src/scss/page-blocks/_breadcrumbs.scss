@@ -33,5 +33,16 @@
         &__items{
             margin-top: 12px;
         }
+        &__item{
+            font-size: 10px;
+            &:not(:first-child){
+                margin-left: 15px;
+                &:before{
+                    height: 8px;
+                    top: 3.5px;
+                    left: -8.5px;
+                }
+            }
+        }
     }
 }

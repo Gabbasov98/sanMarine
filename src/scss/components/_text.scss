@@ -9,6 +9,12 @@
   font-weight: 700;
 }
 
+.title{
+  font-size: 30px;
+  line-height: 133%;
+  font-weight: 700;
+}
+
 .display3{
   font-size: 22px;
   font-weight: 700;
@@ -23,6 +29,30 @@
 .body-text{
   font-size: 15px;
   line-height: 160%;
+  h2,
+  h3{
+    line-height: 120%;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h2{
+    font-size: 28px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  h4{
+    font-size: 18px;
+    line-height: 120%;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  h5{
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
   p{
     line-height: inherit;
     &:not(:last-child){
@@ -36,27 +66,52 @@
       color: #937120;
     }
   }
-}
-
-.mlist{
   li{
     line-height: inherit;
     display: flex;
-    &::before{
-      content: '';
-      display: block;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #000;
-      transform: translateY(8px);
-      margin-right: 5px;
-      flex-shrink: 0;
-    }
     &:not(:last-child){
-      margin-bottom: 16px;
+      margin-bottom: 5px;
     }
   }
+  ul,
+  ol{
+    &:not(:last-child){
+      margin-bottom: 25px;
+    }
+  }
+  ul{
+    font-size: 15px;
+    line-height: 160%;
+    li{
+      &::before{
+        content: '';
+        display: block;
+        width: 13px;
+        height: 2px;
+        background-color: $secondary;
+        transform: translateY(10px);
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  ol{
+    counter-reset: num;
+    padding: 0;
+    li{
+      &::before{
+        content: counter(num) ".";
+        counter-increment: num;
+        display: block;
+        min-width: 13px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.mlist{
+
 }
 
 @media screen and (max-width: 992px){
@@ -64,6 +119,10 @@
   .display2{
     font-size: 20px;
     line-height: 130%;
+  }
+
+  .title{
+    font-size: 22px;
   }
 
   .display3{
@@ -78,9 +137,49 @@
   .body-text{
     font-size: 12px;
     line-height: 150%;
+    h2{
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+    h3{
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+    h4{
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    h5{
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
     p{
       &:not(:last-child){
         margin-bottom: 10px;
+      }
+    }
+    ol,ul{
+      &:not(:last-child){
+        margin-bottom: 12px;
+      }
+    }
+    li{
+      font-size: 12px;
+      line-height: 150%;
+    }
+    ul{
+      li{
+        &::before{
+          transform: translateY(9px);
+          margin-right: 7px;
+        }
+      }
+    }
+    ol{
+      li{
+        &::before{
+          margin-right: 7px;
+        }
       }
     }
   }

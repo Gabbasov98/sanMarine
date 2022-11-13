@@ -4,11 +4,25 @@
   display: flex;
   flex-direction: column;
   transition: all .3s;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/service_card_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+    opacity: 0;
+  }
   &:hover{
     color: #fff;
-    background-image: url(../img/service_card_bg.jpg);
+    &:before{
+      opacity: 1;
+    }
     .service-card__desc{
       background-color: rgba(#0f111c,.63);
       border-color: rgba(#0f111c,.63);
@@ -23,6 +37,8 @@
   &__top{
     padding: 39px 44px 27px;
     height: 213px;
+    position: relative;
+    z-index: 2;
   }
   &__icon{
     width: 72px;
@@ -46,6 +62,8 @@
     font-size: 12px;
     line-height: 175%;
     color: #202020;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -67,6 +85,7 @@
     }
   }
   &__img{
+    display: block;
     flex-shrink: 0;
     margin: -1px 0 0 -1px;
     width: calc(100% + 2px);
@@ -87,6 +106,10 @@
     font-size: 15px;
     line-height: 22px;
     margin-bottom: 20px;
+    display: block;
+    &:hover{
+      color: inherit;
+    }
   }
   &__link{
     width: 101px;
@@ -97,6 +120,9 @@
 }
 
 .contact-card{
+  &:not(:last-child){
+    margin-bottom: 50px;
+  }
   &__top{
     display: flex;
     align-items: center;
@@ -171,6 +197,95 @@
       flex-shrink: 0;
       margin-right: 24px;
     }
+    .list{
+      min-width: calc(100% + 60px);
+      left: -30px;
+    }
+  }
+}
+
+.qa-card{
+  &:first-child{
+    border-top: 1px solid #c3c3c3;
+  }
+  &--active{
+    .qa-card__btn{
+      color: #fff;
+      background-color: $secondary;
+      &:before{
+        content: '-';
+        transform: translateY(-6%);
+      }
+    }
+  }
+  &__show{
+    border-bottom: 1px solid #c3c3c3;
+    padding: 17px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    &:hover{
+      .qa-card__btn{
+        color: #fff;
+        background-color: $secondary;
+      }
+    }
+  }
+  &__btn{
+    flex-shrink: 0;
+    margin-left: 20px;
+    width: 36px;
+    height: 36px;
+    background-color: #e5ca8b;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    &:before{
+      content: '+';
+      font-size: 22px;
+      font-weight: 500;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 30px;
+      height: 30px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+    }
+  }
+  &__hidden{
+    padding: 30px 34px;
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    display: none;
+  }
+  &__quote{
+    display: flex;
+    position: relative;
+    max-width: 1000px;
+    &:before{
+      content: '“';
+      font-size: 59px;
+      color: #ddc07c;
+      margin-right: 15px;
+      flex-shrink: 0;
+      transform: translateY(-5px);
+    }
+  }
+  &__desc{
+    p{
+      &:not(:last-child){
+        margin-bottom: 12px;
+      }
+    }
   }
 }
 
@@ -194,6 +309,103 @@
       padding: 18px 15px 25px;
       font-size: 10px;
       line-height: 16px;
+    }
+  }
+
+  .contact-card{
+    &:not(:last-child){
+      margin-bottom: 45px;
+    }
+    &__top{
+      display: block;
+    }
+    &__title{
+      font-size: 19px;
+      line-height: 110%;
+    }
+    &__city{
+      margin: 12px 0 0 0;
+      img{
+        width: 33px;
+        margin-right: 16px;
+      }
+      .custom-select{
+        padding-right: 17px;
+        background-size: 5px auto !important;
+        .current{
+          font-size: 17.6px;
+        }
+      }
+    }
+    &__bottom{
+      margin-top: 22px;
+      grid-template-columns: 100%;
+    }
+    &__icon{
+      width: 20px;
+      margin-right: 16px;
+    }
+    &__content{
+      padding-top: 3px;
+    }
+    &__item{
+      font-size: 15px;
+      &:not(:last-child){
+        margin-bottom: 12px;
+      }
+    }
+    &__time{
+      margin-top: 14px;
+      &-title{
+        font-size: 10px;
+      }
+      &-desc{
+        font-size: 12px;
+        margin-top: 7px;
+      }
+    }
+    &__link{
+      width: 193px;
+      height: 31px;
+      margin-top: 15px;
+      font-size: 10px;
+    }
+    &__email{
+      padding-top: 2px;
+      display: block;
+    }
+  }
+
+  .qa-card{
+    &__show{
+      padding: 12px 0;
+    }
+    &__btn{
+      height: 28px;
+      width: 28px;
+      &::after{
+        width: 23px;
+        height: 23px;
+      }
+      &::before{
+        font-size: 16.9px;
+      }
+    }
+    &__hidden{
+      padding: 15px 25px 20px;
+    }
+    &__quote{
+      display: block;
+      &::before{
+        margin-left: -5px;
+        font-size: 72px;
+        display: block;
+        transform: unset;
+      }
+    }
+    &__desc{
+      margin-top: -30px;
+      font-size: 13px;
     }
   }
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Экспорт товаров", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"index":"true"})
+        </header>
+        <main class="content">
+
+            <section class="export-page">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <h1 class="breadcrumbs__title display2">Экспорт товаров</h1>
+                        <div class="breadcrumbs__items">
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <span class="breadcrumbs__item">Экспорт товаров</span>
+                        </div>
+                    </div>
+                    <div class="export-page__inner">
+                        <div class="export-page__content">
+                            <div class="export-page__desc body-text">
+                                <p>Экспорт товаров в Китай на сегодняшний день – быстро развивающееся направление.</p>
+                                <p>Внутренний рынок потребления в Китае огромен и ежегодно увеличивается, а цены на некоторые виды продукции гораздо выше, чем в России. Для того, чтобы определить, подходит ли ваш товар для китайского рынка, необходимо тщательно все проанализировать и учесть культурные особенности.</p>
+                            </div>
+                            <div class="export-page__buttons">
+                                <button class="export-page__btn mbtn mbtn-primary">отправить заявку на расчёт</button>
+                                <button class="export-page__btn mbtn mbtn-blue">заказать консультацию</button>
+                            </div>
+                        </div>
+                        <img src="img/export.png" alt="" class="export-page__img">
+                    </div>
+                </div>
+            </section>
+
+            <section class="export-china">
+                <div class="container">
+                    <div class="export-china__inner">
+                        <img src="img/china.png" alt="" class="export-china__img">
+                        <div class="export-china__content">
+                            <div class="export-china__title">
+                                Экспорт в Китай из России
+                                <span>с SanMarine</span>
+                            </div>
+                            <div class="export-china__desc body-text">
+                                <p>Организация грузоперевозок в Китай В зависимости от объемов поставки и особенностей ваших товаров мы подберем для вас оптимальный вариант экспорта в Китай. Если вам нужна перевозка крупной партии в восточные, северные и северо-восточные провинции, советуем контейнерную доставку по железной дороге. Данный вид доставки на дальние расстояния характеризуется большой грузоподъемностью и приемлемой стоимостью услуги.</p>
+                                <p>Если вам нужна перевозка крупной партии в восточные, северные и северо-восточные провинции, советуем контейнерную доставку по железной дороге. Данный вид доставки на дальние расстояния характеризуется большой грузоподъемностью и приемлемой стоимостью услуги.</p>
+                                <p>Мы знаем, как и где найти потенциальных потребителей для вашего товара.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="export export-small">
+                @@include('components/page-blocks/_export.html',{"title":"Популярные группы товаров на экспорт"})
+            </section>
+
+            @@include('components/page-blocks/_consult.html')
+
+            @@include('components/page-blocks/_service.html')
+
+            @@include('components/page-blocks/_subscribe.html',{"error":"false","success":"false"})
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
